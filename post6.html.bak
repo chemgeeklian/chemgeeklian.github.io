@@ -1,0 +1,192 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>index</title>
+  </head>
+  <body style=" background-image: url(&quot;background.jpg&quot;);"> <font color="blue"><big>Chemgeeklian's
+        new blog</big></font> <br>
+    <br>
+    <h1 id="firstHeading" class="firstHeading" style="color: rgb(0, 0, 0); background: none; font-weight: normal; margin: 0px 0px 0.25em; overflow: visible; padding: 0px; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; line-height: 1.3; font-family: &quot;Linux Libertine&quot;, Georgia, Times, serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"
+      lang="en">Explicit and implicit methods</h1>
+    <div id="bodyContent" class="mw-body-content" style="position: relative; line-height: 1.6; font-size: 0.875em; z-index: 0; color: #222222; font-family: sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration-style: initial; text-decoration-color: initial;">From
+      Wikipedia, the free encyclopedia
+      <div id="contentSub" style="font-size: 12px; line-height: 1.2em; margin: 0px 0px 1.4em 1em; color: rgb(84, 89, 93); width: auto; display: block !important; font-family: sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"></div>
+      <div id="jump-to-nav" class="mw-jump" style="overflow: hidden; height: 0px; zoom: 1; user-select: none; margin-top: -1.4em !important; margin-bottom: 1.4em !important; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><a
+          href="https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method#mw-head"
+          style="text-decoration: none; color: rgb(11, 0, 128); background: none;"></a><a
+          href="https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method#p-search"
+          style="text-decoration: none; color: rgb(11, 0, 128); background: none;"><br>
+        </a></div>
+      <br>
+      <b>Explicit methods</b><span>&nbsp;</span>calculate the state of a system
+      at a later time from the state of the system at the current time, while<span>&nbsp;</span><b>implicit
+        methods</b><span>&nbsp;</span>find a solution by solving an equation
+      involving both the current state of the system and the later one.
+      Mathematically, if<span>&nbsp;</span><span class="mwe-math-element"><span
+          class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation encoding="application/x-tex">{\displaystyle
+                Y(t)}</annotation></semantics></math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b160c901a32a90bdf180749f101db13c894cbed2"
+          class="mwe-math-fallback-image-inline" alt="Y(t)" style="border: 0px; vertical-align: -0.838ex; margin: 0px; display: inline-block; width: 4.422ex; height: 2.843ex;"></span><span>&nbsp;</span>is
+      the current system state and<span>&nbsp;</span><span class="mwe-math-element"><span
+          class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation encoding="application/x-tex">{\displaystyle
+                Y(t+\Delta t)}</annotation></semantics></math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4984508fe6544e1a596d92cdb4d3cbcbf7fd0230"
+          class="mwe-math-fallback-image-inline" alt="Y(t+\Delta t)" style="border: 0px; vertical-align: -0.838ex; margin: 0px; display: inline-block; width: 10.038ex; height: 2.843ex;"></span><span>&nbsp;</span>is
+      the state at the later time (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+          style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+            xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation encoding="application/x-tex">{\displaystyle
+                \Delta t}</annotation></semantics></math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8c28867ecd34e2caed12cf38feadf6a81a7ee542"
+          class="mwe-math-fallback-image-inline" alt="\Delta t" style="border: 0px; vertical-align: -0.338ex; margin: 0px; display: inline-block; width: 2.775ex; height: 2.176ex;"></span><span>&nbsp;</span>is
+      a small time step), then, for an explicit method
+      <dl style="margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <dd style="margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;"><span
+            class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+              style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+                xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                    encoding="application/x-tex">{\displaystyle Y(t+\Delta
+                    t)=F(Y(t))\,}</annotation></semantics></math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4d72c127fbdfdfd3b11386bcc2e8b1672b59e8c4"
+              class="mwe-math-fallback-image-inline" alt="Y(t+\Delta t)=F(Y(t))\,"
+              style="border: 0px; vertical-align: -0.838ex; display: inline-block; width: 21.496ex; height: 2.843ex;"></span></dd>
+      </dl>
+      while for an implicit method one solves an equation
+      <dl style="margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <dd style="margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;"><span
+            class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+              style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+                xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                    encoding="application/x-tex">{\displaystyle G{\Big
+                    (}Y(t),Y(t+\Delta t){\Big )}=0\qquad (1)\,}</annotation></semantics></math></span><img
+              src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3e5330e3b71d7ad310f18f2eeb4412429e873228"
+              class="mwe-math-fallback-image-inline" alt="{\displaystyle G{\Big (}Y(t),Y(t+\Delta t){\Big )}=0\qquad (1)\,}"
+              style="border: 0px; vertical-align: -1.838ex; display: inline-block; width: 32.361ex; height: 4.843ex;"></span></dd>
+      </dl>
+      <div style="text-align: justify;"><span style="color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"><span>I</span>mplicit
+          methods require an extra computation (solving the above equation), and
+          they can be much harder to implement. Implicit methods are used
+          because many problems arising in practice are<span>&nbsp;</span></span><a
+          href="https://en.wikipedia.org/wiki/Stiff_equation" title="Stiff equation"
+          style="text-decoration: none; color: rgb(11, 0, 128); background: none rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">stiff</a><span
+          style="color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">,
+          for which the use of an explicit method requires impractically small
+          time steps<span>&nbsp;</span></span><span class="mwe-math-element" style="color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span
+            class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                  encoding="application/x-tex">{\displaystyle \Delta t}</annotation></semantics></math></span><img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8c28867ecd34e2caed12cf38feadf6a81a7ee542"
+            class="mwe-math-fallback-image-inline" alt="\Delta t" style="border: 0px; vertical-align: -0.338ex; margin: 0px; display: inline-block; width: 2.775ex; height: 2.176ex;"></span><span
+          style="color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"><span>&nbsp;</span>to
+          keep the error in the result bounded (see<span>&nbsp;</span></span><a
+          href="https://en.wikipedia.org/wiki/Numerical_stability" title="Numerical stability"
+          style="text-decoration: none; color: rgb(11, 0, 128); background: none rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">numerical
+          stability</a><span style="color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">).
+          For such problems, to achieve given accuracy, it takes much less
+          computational time to use an implicit method with larger time steps,
+          even taking into account that one needs to solve an equation of the
+          form at each time step. That said, whether one should use an explicit
+          or implicit method depends upon the problem to be solved.<br>
+          <br>
+        </span><br>
+        <h1 id="firstHeading" class="firstHeading" style="color: rgb(0, 0, 0); background: none; font-weight: normal; margin: 0px 0px 0.25em; overflow: visible; padding: 0px; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; line-height: 1.3; font-family: &quot;Linux Libertine&quot;, Georgia, Times, serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"
+          lang="en">Crank¨CNicolson method</h1>
+        <div id="bodyContent" class="mw-body-content" style="position: relative; line-height: 1.6; font-size: 0.875em; z-index: 0; color: rgb(34, 34, 34); font-family: sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">From
+          Wikipedia, the free encyclopedia<br>
+        </div>
+        The Crank¨CNicolson method is based on the<span>&nbsp;</span><a href="https://en.wikipedia.org/wiki/Trapezoidal_rule_%28differential_equations%29"
+          title="Trapezoidal rule (differential equations)" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">trapezoidal
+          rule</a>, giving second-order convergence in time. For example, in one
+        dimension, if the<span>&nbsp;</span><a href="https://en.wikipedia.org/wiki/Partial_differential_equation"
+          title="Partial differential equation" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">partial
+          differential equation</a><span>&nbsp;</span>is
+        <dl style="margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+          <dd style="margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;"><span
+              class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+                  xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                      encoding="application/x-tex">{\displaystyle {\frac
+                      {\partial u}{\partial t}}=F\left(u,\,x,\,t,\,{\frac
+                      {\partial u}{\partial x}},\,{\frac {\partial
+                      ^{2}u}{\partial x^{2}}}\right)}</annotation></semantics></math></span><img
+                src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cc86c4f66cb7648e480663c43d9601335e8c7f7d"
+                class="mwe-math-fallback-image-inline" alt="{\frac  {\partial u}{\partial t}}=F\left(u,\,x,\,t,\,{\frac  {\partial u}{\partial x}},\,{\frac  {\partial ^{2}u}{\partial x^{2}}}\right)"
+                style="border: 0px; vertical-align: -2.505ex; display: inline-block; width: 29.362ex; height: 6.343ex;"></span></dd>
+        </dl>
+        then, letting<span>&nbsp;</span><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+            style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                  encoding="application/x-tex">{\displaystyle u(i\Delta
+                  x,\,n\Delta t)=u_{i}^{n}\,}</annotation></semantics></math></span><img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bfcc380b0f34bcb80e2f834a217d373206703b59"
+            class="mwe-math-fallback-image-inline" alt="u(i\Delta x,\,n\Delta t)=u_{{i}}^{{n}}\,"
+            style="border: 0px; vertical-align: -1.005ex; margin: 0px; display: inline-block; width: 18.832ex; height: 3.009ex;"></span>,
+        the equation for Crank¨CNicolson method is a combination of the<span>&nbsp;</span><a
+          href="https://en.wikipedia.org/wiki/Euler_method" title="Euler method"
+          style="text-decoration: none; color: rgb(11, 0, 128); background: none;">forward
+          Euler method</a><span>&nbsp;</span>at<span>&nbsp;</span><span class="mwe-math-element"><span
+            class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                  encoding="application/x-tex">{\displaystyle n}</annotation></semantics></math></span><img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b"
+            class="mwe-math-fallback-image-inline" alt="n" style="border: 0px; vertical-align: -0.338ex; margin: 0px; display: inline-block; width: 1.395ex; height: 1.676ex;"></span><span>&nbsp;</span>and
+        the<span>&nbsp;</span><a href="https://en.wikipedia.org/wiki/Backward_Euler_method"
+          title="Backward Euler method" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">backward
+          Euler method</a><span>&nbsp;</span>at<span>&nbsp;</span><i>n</i>&nbsp;+&nbsp;1
+        (note, however, that the method itself is<span>&nbsp;</span><i>not</i><span>&nbsp;</span>simply
+        the average of those two methods, as the equation has an implicit
+        dependence on the solution):
+        <dl style="margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+          <dd style="margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;"><span
+              class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+                  xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                      encoding="application/x-tex">{\displaystyle {\frac
+                      {u_{i}^{n+1}-u_{i}^{n}}{\Delta
+                      t}}=F_{i}^{n}\left(u,\,x,\,t,\,{\frac {\partial
+                      u}{\partial x}},\,{\frac {\partial ^{2}u}{\partial
+                      x^{2}}}\right)\qquad {\mbox{(forward Euler)}}}</annotation></semantics></math></span><img
+                src="https://wikimedia.org/api/rest_v1/media/math/render/svg/80c0cb81734c7ed75691b8ed1a2f060d725e2a70"
+                class="mwe-math-fallback-image-inline" alt="{\frac  {u_{{i}}^{{n+1}}-u_{{i}}^{{n}}}{\Delta t}}=F_{{i}}^{{n}}\left(u,\,x,\,t,\,{\frac  {\partial u}{\partial x}},\,{\frac  {\partial ^{2}u}{\partial x^{2}}}\right)\qquad {\mbox{(forward Euler)}}"
+                style="border: 0px; vertical-align: -2.505ex; display: inline-block; width: 58.763ex; height: 6.676ex;"></span></dd>
+        </dl>
+        <dl style="margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+          <dd style="margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;"><span
+              class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+                  xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                      encoding="application/x-tex">{\displaystyle {\frac
+                      {u_{i}^{n+1}-u_{i}^{n}}{\Delta
+                      t}}=F_{i}^{n+1}\left(u,\,x,\,t,\,{\frac {\partial
+                      u}{\partial x}},\,{\frac {\partial ^{2}u}{\partial
+                      x^{2}}}\right)\qquad {\mbox{(backward Euler)}}}</annotation></semantics></math></span><img
+                src="https://wikimedia.org/api/rest_v1/media/math/render/svg/64f5b609194fb93225578d50b2acb38c74c7de78"
+                class="mwe-math-fallback-image-inline" alt="{\frac  {u_{{i}}^{{n+1}}-u_{{i}}^{{n}}}{\Delta t}}=F_{{i}}^{{n+1}}\left(u,\,x,\,t,\,{\frac  {\partial u}{\partial x}},\,{\frac  {\partial ^{2}u}{\partial x^{2}}}\right)\qquad {\mbox{(backward Euler)}}"
+                style="border: 0px; vertical-align: -2.505ex; display: inline-block; width: 62.792ex; height: 6.676ex;"></span></dd>
+        </dl>
+        <dl style="margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+          <dd style="margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;"><span
+              class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+                  xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                      encoding="application/x-tex">{\displaystyle {\frac
+                      {u_{i}^{n+1}-u_{i}^{n}}{\Delta t}}={\frac
+                      {1}{2}}\left[F_{i}^{n+1}\left(u,\,x,\,t,\,{\frac {\partial
+                      u}{\partial x}},\,{\frac {\partial ^{2}u}{\partial
+                      x^{2}}}\right)+F_{i}^{n}\left(u,\,x,\,t,\,{\frac {\partial
+                      u}{\partial x}},\,{\frac {\partial ^{2}u}{\partial
+                      x^{2}}}\right)\right]\qquad {\mbox{(Crank-Nicolson)}}.}</annotation></semantics></math></span><img
+                src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1089204fe09d12b6fa3a0f5ebf520c3d6cdb08e7"
+                class="mwe-math-fallback-image-inline" alt="{\frac  {u_{{i}}^{{n+1}}-u_{{i}}^{{n}}}{\Delta t}}={\frac  {1}{2}}\left[F_{{i}}^{{n+1}}\left(u,\,x,\,t,\,{\frac  {\partial u}{\partial x}},\,{\frac  {\partial ^{2}u}{\partial x^{2}}}\right)+F_{{i}}^{{n}}\left(u,\,x,\,t,\,{\frac  {\partial u}{\partial x}},\,{\frac  {\partial ^{2}u}{\partial x^{2}}}\right)\right]\qquad {\mbox{(Crank-Nicolson)}}."
+                style="border: 0px; vertical-align: -2.505ex; display: inline-block; width: 95.035ex; height: 6.676ex;"></span></dd>
+        </dl>
+        <br>
+        <br>
+        <strong>Reference: Wikipedia<br>
+        </strong><a href="https://en.wikipedia.org/wiki/Stiff_equation">Stiff
+          equation</a><strong><br>
+          <br>
+        </strong><br>
+        <br>
+        <br>
+        <a href="index.html">back</a> </div>
+    </div>
+  </body>
+</html>

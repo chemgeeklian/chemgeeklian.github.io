@@ -5,28 +5,83 @@
   <body style="background-image: url(&quot;background.jpg&quot;);"> <font color="blue"><big>Chemgeeklian's
         new blog</big></font> <br>
     <span style="color: rgb(68, 68, 68); font-family: Tahoma, &quot;Microsoft Yahei&quot;, Simsun; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 250); display: inline !important; float: none;"><br>
-    </span><span style="color: #444444;"><span style="font-family: Tahoma,&quot;Microsoft Yahei&quot;,Simsun;">Frozen:
-        -1，Others (variable): 0<br>
-        ex:<br>
-        C
-        0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        2.10451556&nbsp;&nbsp;&nbsp; 1.30476920&nbsp;&nbsp;&nbsp; 0.00000000<br>
-        C
-        0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        1.53972704&nbsp;&nbsp;&nbsp; 2.37591121&nbsp;&nbsp; -0.60408756<br>
-        C
-        0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        0.04292261&nbsp;&nbsp;&nbsp; 2.47139369&nbsp;&nbsp; -0.52690516<br>
-        C
-        -1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        -0.71631194&nbsp;&nbsp;&nbsp; 1.32920531&nbsp;&nbsp;&nbsp; 0.11350514<br>
-        O
-        -1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        -1.77102370&nbsp;&nbsp;&nbsp; 1.50011168&nbsp;&nbsp;&nbsp; 0.62389092</span></span><br>
-    <div><span style="color: rgb(68, 68, 68); font-family: Tahoma, &quot;Microsoft Yahei&quot;, Simsun; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 250); display: inline !important; float: none;"></span></div>
-    <span style="color: rgb(68, 68, 68); font-family: Tahoma, &quot;Microsoft Yahei&quot;, Simsun; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 250); display: inline !important; float: none;"><br>
+    </span><br>
+    <h1 id="firstHeading" class="firstHeading" style="color: rgb(0, 0, 0); background: none; font-weight: normal; margin: 0px 0px 0.25em; overflow: visible; padding: 0px; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; line-height: 1.3; font-family: &quot;Linux Libertine&quot;, Georgia, Times, serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"
+      lang="en">Kronecker product</h1>
+    <span style="color: #444444;"><span style="font-family: Tahoma,&quot;Microsoft Yahei&quot;,Simsun;">
+      </span></span><br>
+    <p style="margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">If<span>&nbsp;</span><b>A</b><span>&nbsp;</span>is
+      an<span>&nbsp;</span><span class="nowrap" style="white-space: nowrap;"><i>m</i><span>&nbsp;</span>×<span>&nbsp;</span><i>n</i></span><span>&nbsp;</span>matrix
+      and<span>&nbsp;</span><b>B</b><span>&nbsp;</span>is a<span>&nbsp;</span><span
+        class="nowrap" style="white-space: nowrap;"><i>p</i><span>&nbsp;</span>×<span>&nbsp;</span><i>q</i></span><span>&nbsp;</span>matrix,
+      then the Kronecker product<span>&nbsp;</span><span class="nowrap" style="white-space: nowrap;"><b>A</b><span>&nbsp;</span>⊗<span>&nbsp;</span><b>B</b></span><span>&nbsp;</span>is
+      the<span>&nbsp;</span><span class="nowrap" style="white-space: nowrap;"><i>mp</i><span>&nbsp;</span>×<span>&nbsp;</span><i>nq</i></span><span>&nbsp;</span>block
+      matrix:</p>
+    <dl style="margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+      <dd style="margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;"><span
+          class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+            style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                  encoding="application/x-tex">{\displaystyle \mathbf {A}
+                  \otimes \mathbf {B} ={\begin{bmatrix}a_{11}\mathbf {B}
+                  &amp;\cdots &amp;a_{1n}\mathbf {B} \\\vdots &amp;\ddots
+                  &amp;\vdots \\a_{m1}\mathbf {B} &amp;\cdots &amp;a_{mn}\mathbf
+                  {B} \end{bmatrix}},}</annotation></semantics></math></span><img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cc2eec0b97a4fae13cb04ca7e06687bca1e2c120"
+            class="mwe-math-fallback-image-inline" alt="\mathbf{A}\otimes\mathbf{B} = \begin{bmatrix} a_{11} \mathbf{B} &amp; \cdots &amp; a_{1n}\mathbf{B} \\ \vdots &amp; \ddots &amp; \vdots \\ a_{m1} \mathbf{B} &amp; \cdots &amp; a_{mn} \mathbf{B} \end{bmatrix}, "
+            style="border: 0px; vertical-align: -5.005ex; display: inline-block; width: 33.402ex; height: 11.009ex;"></span></dd>
+    </dl>
+    <p style="margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">more
+      explicitly:</p>
+    <dl style="margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(34, 34, 34); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+      <dd style="margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;"><span
+          class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+            style="display: none; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute; width: 1px; height: 1px; opacity: 0; font-size: 16.52px;"><math
+              xmlns="http://www.w3.org/1998/Math/MathML"><semantics><annotation
+                  encoding="application/x-tex">{\displaystyle {\mathbf {A}
+                  \otimes \mathbf {B}
+                  }={\begin{bmatrix}a_{11}b_{11}&amp;a_{11}b_{12}&amp;\cdots
+                  &amp;a_{11}b_{1q}&amp;\cdots &amp;\cdots
+                  &amp;a_{1n}b_{11}&amp;a_{1n}b_{12}&amp;\cdots
+                  &amp;a_{1n}b_{1q}\\a_{11}b_{21}&amp;a_{11}b_{22}&amp;\cdots
+                  &amp;a_{11}b_{2q}&amp;\cdots &amp;\cdots
+                  &amp;a_{1n}b_{21}&amp;a_{1n}b_{22}&amp;\cdots
+                  &amp;a_{1n}b_{2q}\\\vdots &amp;\vdots &amp;\ddots &amp;\vdots
+                  &amp;&amp;&amp;\vdots &amp;\vdots &amp;\ddots &amp;\vdots
+                  \\a_{11}b_{p1}&amp;a_{11}b_{p2}&amp;\cdots
+                  &amp;a_{11}b_{pq}&amp;\cdots &amp;\cdots
+                  &amp;a_{1n}b_{p1}&amp;a_{1n}b_{p2}&amp;\cdots
+                  &amp;a_{1n}b_{pq}\\\vdots &amp;\vdots &amp;&amp;\vdots
+                  &amp;\ddots &amp;&amp;\vdots &amp;\vdots &amp;&amp;\vdots
+                  \\\vdots &amp;\vdots &amp;&amp;\vdots &amp;&amp;\ddots
+                  &amp;\vdots &amp;\vdots &amp;&amp;\vdots
+                  \\a_{m1}b_{11}&amp;a_{m1}b_{12}&amp;\cdots
+                  &amp;a_{m1}b_{1q}&amp;\cdots &amp;\cdots
+                  &amp;a_{mn}b_{11}&amp;a_{mn}b_{12}&amp;\cdots
+                  &amp;a_{mn}b_{1q}\\a_{m1}b_{21}&amp;a_{m1}b_{22}&amp;\cdots
+                  &amp;a_{m1}b_{2q}&amp;\cdots &amp;\cdots
+                  &amp;a_{mn}b_{21}&amp;a_{mn}b_{22}&amp;\cdots
+                  &amp;a_{mn}b_{2q}\\\vdots &amp;\vdots &amp;\ddots &amp;\vdots
+                  &amp;&amp;&amp;\vdots &amp;\vdots &amp;\ddots &amp;\vdots
+                  \\a_{m1}b_{p1}&amp;a_{m1}b_{p2}&amp;\cdots
+                  &amp;a_{m1}b_{pq}&amp;\cdots &amp;\cdots
+                  &amp;a_{mn}b_{p1}&amp;a_{mn}b_{p2}&amp;\cdots
+                  &amp;a_{mn}b_{pq}\end{bmatrix}}.}</annotation></semantics></math></span><img
+            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/88948d4780e5d5fcb6e786d9d4c172ea78ceaabb"
+            class="mwe-math-fallback-image-inline" alt="{\mathbf{A}\otimes\mathbf{B}} = \begin{bmatrix}
+   a_{11} b_{11} &amp; a_{11} b_{12} &amp; \cdots &amp; a_{11} b_{1q} &amp;                   \cdots &amp; \cdots &amp; a_{1n} b_{11} &amp; a_{1n} b_{12} &amp; \cdots &amp; a_{1n} b_{1q} \\
+   a_{11} b_{21} &amp; a_{11} b_{22} &amp; \cdots &amp; a_{11} b_{2q} &amp;                   \cdots &amp; \cdots &amp; a_{1n} b_{21} &amp; a_{1n} b_{22} &amp; \cdots &amp; a_{1n} b_{2q} \\
+   \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; &amp; &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\   a_{11} b_{p1} &amp; a_{11} b_{p2} &amp; \cdots &amp; a_{11} b_{pq} &amp;
+                   \cdots &amp; \cdots &amp; a_{1n} b_{p1} &amp; a_{1n} b_{p2} &amp; \cdots &amp; a_{1n} b_{pq} \\   \vdots &amp; \vdots &amp; &amp; \vdots &amp; \ddots &amp; &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
+   \vdots &amp; \vdots &amp; &amp; \vdots &amp; &amp; \ddots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\   a_{m1} b_{11} &amp; a_{m1} b_{12} &amp; \cdots &amp; a_{m1} b_{1q} &amp;
+                   \cdots &amp; \cdots &amp; a_{mn} b_{11} &amp; a_{mn} b_{12} &amp; \cdots &amp; a_{mn} b_{1q} \\   a_{m1} b_{21} &amp; a_{m1} b_{22} &amp; \cdots &amp; a_{m1} b_{2q} &amp;
+                   \cdots &amp; \cdots &amp; a_{mn} b_{21} &amp; a_{mn} b_{22} &amp; \cdots &amp; a_{mn} b_{2q} \\   \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; &amp; &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+   a_{m1} b_{p1} &amp; a_{m1} b_{p2} &amp; \cdots &amp; a_{m1} b_{pq} &amp;                   \cdots &amp; \cdots &amp; a_{mn} b_{p1} &amp; a_{mn} b_{p2} &amp; \cdots &amp; a_{mn} b_{pq}
+\end{bmatrix}. " style="border: 0px; vertical-align: -19.174ex; display: inline-block; margin-bottom: -0.33ex; width: 87.171ex; height: 40.176ex;"></span></dd>
+    </dl>
+    <span style="color: rgb(68, 68, 68); font-family: Tahoma, &quot;Microsoft Yahei&quot;, Simsun; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(249, 249, 250); display: inline !important; float: none;">
       <br>
-      <a target="_top" href="http://bbs.keinsci.com/thread-386-1-1.html">http://bbs.keinsci.com/thread-386-1-1.html</a><br>
+      From Wikipedia.<br>
       <br>
     </span><a href="index.html">back</a><br>
   </body>
