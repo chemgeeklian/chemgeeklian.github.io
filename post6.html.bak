@@ -89,8 +89,7 @@
         <h1 id="firstHeading" class="firstHeading" style="color: rgb(0, 0, 0); background: none; font-weight: normal; margin: 0px 0px 0.25em; overflow: visible; padding: 0px; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; line-height: 1.3; font-family: &quot;Linux Libertine&quot;, Georgia, Times, serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"
           lang="en">Crank¨CNicolson method</h1>
         <div id="bodyContent" class="mw-body-content" style="position: relative; line-height: 1.6; font-size: 0.875em; z-index: 0; color: rgb(34, 34, 34); font-family: sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">From
-          Wikipedia, the free encyclopedia<br>
-        </div>
+          Wikipedia, the free encyclopedia</div>
         The Crank¨CNicolson method is based on the<span>&nbsp;</span><a href="https://en.wikipedia.org/wiki/Trapezoidal_rule_%28differential_equations%29"
           title="Trapezoidal rule (differential equations)" style="text-decoration: none; color: rgb(11, 0, 128); background: none;">trapezoidal
           rule</a>, giving second-order convergence in time. For example, in one
@@ -177,9 +176,7 @@
                 class="mwe-math-fallback-image-inline" alt="{\frac  {u_{{i}}^{{n+1}}-u_{{i}}^{{n}}}{\Delta t}}={\frac  {1}{2}}\left[F_{{i}}^{{n+1}}\left(u,\,x,\,t,\,{\frac  {\partial u}{\partial x}},\,{\frac  {\partial ^{2}u}{\partial x^{2}}}\right)+F_{{i}}^{{n}}\left(u,\,x,\,t,\,{\frac  {\partial u}{\partial x}},\,{\frac  {\partial ^{2}u}{\partial x^{2}}}\right)\right]\qquad {\mbox{(Crank-Nicolson)}}."
                 style="border: 0px; vertical-align: -2.505ex; display: inline-block; width: 95.035ex; height: 6.676ex;"></span></dd>
         </dl>
-        <br>
-        <br>
-        <strong>Reference: Wikipedia<br>
+        <strong><br>
         </strong><a href="https://en.wikipedia.org/wiki/Stiff_equation">Stiff
           equation</a><strong><br>
           <br>
