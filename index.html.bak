@@ -3,8 +3,8 @@
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <title>index</title>
   </head>
-  <body background="background.jpg"> <font color="blue"><big>Chemgeeklian's new
-        blog</big></font> <br>
+  <body style="width: 785px;" background="background.jpg"> <font color="blue"><big>Chemgeeklian's
+        new blog</big></font> <br>
     <br>
     <br>
     <b>***My posts***</b> <br>
@@ -31,6 +31,7 @@
     <a target="_top" title="谈谈Gaussian中的对称性与nosymm关键词的使用" href="http://bbs.keinsci.com/thread-1355-1-1.html">
     </a>7.<a title="scipy.integrate.ode" href="https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.integrate.ode.html">scipy.integrate.ode</a>:
     solver of ordinary differential equation<br>
+    8.<br>
     <br>
     <br>
     <font color="#C00000">W</font><font color="#B4000C">e</font><font color="#A80018">l</font><font
@@ -51,8 +52,10 @@
     <br>
     <br>
     <br>
-    <a href="http://s11.flagcounter.com/more/wis"><img src="http://s11.flagcounter.com/count2/wis/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
-        alt="Flag Counter" border="0"></a> <br>
-    Chemgeeklian&amp;Github
+    <div style="text-align: left;"><a href="http://s11.flagcounter.com/more/wis"><img
+          src="http://s11.flagcounter.com/count2/wis/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
+          alt="Flag Counter" border="0"></a><br>
+      Chemgeeklian&amp;Github
+    </div>
   </body>
 </html>

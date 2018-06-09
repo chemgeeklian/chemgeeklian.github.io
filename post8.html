@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>index</title>
+  </head>
+  <body style=" background-image: url(&quot;background.jpg&quot;);"> <font color="blue"><big>Chemgeeklian's
+        new blog</big></font> <br>
+    <br>
+    <h1 id="firstHeading" class="firstHeading" style="color: rgb(0, 0, 0); background: none; font-weight: normal; margin: 0px 0px 0.25em; overflow: visible; padding: 0px; border-bottom: 1px solid rgb(162, 169, 177); font-size: 1.8em; line-height: 1.3; font-family: &quot;Linux Libertine&quot;, Georgia, Times, serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"
+      lang="en">A numpy broadcasting problem and solving</h1>
+    <div id="bodyContent" class="mw-body-content" style="position: relative; line-height: 1.6; font-size: 0.875em; z-index: 0; color: #222222; font-family: sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-decoration-style: initial; text-decoration-color: initial; width: 725px;"><strong></strong><br>
+      <strong></strong>
+      <div style="text-align: justify;">Broadcasting rule:<br>
+        <ol>
+          <li>All input arrays with ndim smaller than the input array of largest
+            ndim, have 1’s prepended to their shapes.</li>
+          <li>The size in each dimension of the output shape is the maximum of
+            all the input sizes in that dimension.</li>
+          <li>An input can be used in the calculation if its size in a
+            particular dimension either matches the output size in that
+            dimension, or has value exactly 1.</li>
+          <li>If an input has a dimension size of 1 in its shape, the first data
+            entry in that dimension will be used for all calculations along that
+            dimension. In other words, the stepping machinery of the ufunc will
+            simply not step along that dimension (the stride will be 0 for that
+            dimension).</li>
+        </ol>
+        <code></code>Therefore:<br>
+        <pre style="overflow-x: auto; overflow-y: hidden; font-family: Consolas, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, monospace; font-size: 13px; letter-spacing: 0.015em; line-height: 15.6px; padding: 0.5em; border: 1px solid rgb(204, 204, 204); border-radius: 2px; background: rgb(240, 240, 240); color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span
+class="kn" style="color: rgb(0, 112, 32); font-weight: bold;">import</span> <span
+class="nn" style="color: rgb(14, 132, 181); font-weight: bold;">numpy</span> <span
+class="k" style="color: rgb(0, 112, 32); font-weight: bold;">as</span> <span class="nn"
+style="color: rgb(14, 132, 181); font-weight: bold;">np<br><br></span><span class="n">a</span><span
+class="o" style="color: rgb(102, 102, 102);">=</span><span class="n">np</span><span
+class="o" style="color: rgb(102, 102, 102);">.</span><span class="n">arange</span><span
+class="p">(</span><span class="mi" style="color: rgb(64, 160, 112);">20</span><span
+class="p">)</span><span class="o" style="color: rgb(102, 102, 102);">.</span><span
+class="n">reshape</span><span class="p">([</span><span class="mi" style="color: rgb(64, 160, 112);">5</span><span
+class="p">,</span><span class="o" style="color: rgb(102, 102, 102);">-</span><span
+class="mi" style="color: rgb(64, 160, 112);">1</span><span class="p">])</span>
+<span class="n">b</span><span class="o" style="color: rgb(102, 102, 102);">=</span><span
+class="n">np</span><span class="o" style="color: rgb(102, 102, 102);">.</span><span
+class="n">array</span><span class="p">([</span><span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span><span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">])</span>
+
+<span class="n">In [2]:a</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">2</span><span
+class="p">]:</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mi" style="color: rgb(64, 160, 112);">0</span><span
+class="p">,</span>  <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span>  <span class="mi" style="color: rgb(64, 160, 112);">2</span><span
+class="p">,</span>  <span class="mi" style="color: rgb(64, 160, 112);">3</span><span
+class="p">],</span>
+       <span class="p">[</span> <span class="mi" style="color: rgb(64, 160, 112);">4</span><span
+class="p">,</span>  <span class="mi" style="color: rgb(64, 160, 112);">5</span><span
+class="p">,</span>  <span class="mi" style="color: rgb(64, 160, 112);">6</span><span
+class="p">,</span>  <span class="mi" style="color: rgb(64, 160, 112);">7</span><span
+class="p">],</span>
+       <span class="p">[</span> <span class="mi" style="color: rgb(64, 160, 112);">8</span><span
+class="p">,</span>  <span class="mi" style="color: rgb(64, 160, 112);">9</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">10</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">11</span><span
+class="p">],</span>
+       <span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">12</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">13</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">14</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">15</span><span
+class="p">],</span>
+       <span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">16</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">17</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">18</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">19</span><span
+class="p">]])</span>
+<span class="n">b</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">3</span><span
+class="p">]:</span> <span class="n">array</span><span class="p">([</span><span class="mi"
+style="color: rgb(64, 160, 112);">1</span><span class="p">,</span> <span class="mi"
+style="color: rgb(64, 160, 112);">1</span><span class="p">])</span>
+
+<span class="n">a</span><span class="p">[:,</span><span class="mi" style="color: rgb(64, 160, 112);">2</span><span
+class="p">:]</span><span class="o" style="color: rgb(102, 102, 102);">=</span><span
+class="n">b<br><br></span></pre><code></code>
+        This is OK:<br><pre style="overflow-x: auto; overflow-y: hidden; font-family: Consolas, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, monospace; font-size: 13px; letter-spacing: 0.015em; line-height: 15.6px; padding: 0.5em; border: 1px solid rgb(204, 204, 204); border-radius: 2px; background: rgb(240, 240, 240); color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span
+class="n">a
+Out[6]: 
+array([[ 0,  1,  1,  1],
+       [ 4,  5,  1,  1],
+       [ 8,  9,  1,  1],
+       [12, 13,  1,  1],
+       [16, 17,  1,  1]])</span></pre>
+But if<br><pre style="overflow-x: auto; overflow-y: hidden; font-family: Consolas, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, monospace; font-size: 13px; letter-spacing: 0.015em; line-height: 15.6px; padding: 0.5em; border: 1px solid rgb(204, 204, 204); border-radius: 2px; background: rgb(240, 240, 240); color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span
+class="n">In [7]:a</span><span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">3</span><span
+class="p">:,:]</span><span class="o" style="color: rgb(102, 102, 102);">=</span><span
+class="n">b</span><br><br><span class="n">Traceback</span> <span class="p">(</span><span
+class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span
+class="n">last</span><span class="p">):</span>
+
+  <span class="n">File</span> <span class="s2" style="color: rgb(64, 112, 160);">"&lt;ipython-input-7-b93b1fced1ff&gt;"</span><span
+class="p">,</span> <span class="n">line</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="ow" style="color: rgb(0, 112, 32); font-weight: bold;">in</span> <span
+class="o" style="color: rgb(102, 102, 102);">&lt;</span><span class="n">module</span><span
+class="o" style="color: rgb(102, 102, 102);">&gt;</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">3</span><span
+class="p">:,:]</span><span class="o" style="color: rgb(102, 102, 102);">=</span><span
+class="n">b</span>
+
+<span class="ne" style="color: rgb(0, 112, 32);">ValueError</span><span class="p">:</span> <span
+class="n">could</span> <span class="ow" style="color: rgb(0, 112, 32); font-weight: bold;">not</span> <span
+class="n">broadcast</span> <span class="nb" style="color: rgb(0, 112, 32);">input</span> <span
+class="n">array</span> <span class="kn" style="color: rgb(0, 112, 32); font-weight: bold;">from</span> <span
+class="nn" style="color: rgb(14, 132, 181); font-weight: bold;">shape</span> <span
+class="p">(</span><span class="mi" style="color: rgb(64, 160, 112);">2</span><span
+class="p">)</span> <span class="n">into</span> <span class="n">shape</span> <span
+class="p">(</span><span class="mi" style="color: rgb(64, 160, 112);">2</span><span
+class="p">,</span><span class="mi" style="color: rgb(64, 160, 112);">4</span><span
+class="p">)</span></pre>So in this case, I have to reshape b, or expand it in axis=1 dimension. Otherwise will it cannot broadcast.<br>
+        <pre style="overflow-x: auto; overflow-y: hidden; font-family: Consolas, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, monospace; font-size: 13px; letter-spacing: 0.015em; line-height: 15.6px; padding: 0.5em; border: 1px solid rgb(204, 204, 204); border-radius: 2px; background: rgb(240, 240, 240); color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span
+class="n">a</span><span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">3</span><span
+class="p">:,:]</span><span class="o" style="color: rgb(102, 102, 102);">=</span><span
+class="n">b</span><span class="o" style="color: rgb(102, 102, 102);">.</span><span
+class="n">reshape</span><span class="p">([</span><span class="mi" style="color: rgb(64, 160, 112);">2</span><span
+class="p">,</span><span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">])</span>
+
+<span class="n">a</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">10</span><span
+class="p">]:</span> 
+<span class="n">array</span><span class="p">([[</span><span class="mi" style="color: rgb(64, 160, 112);">0</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">],</span>
+       <span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">4</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">5</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">],</span>
+       <span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">8</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">9</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">],</span>
+       <span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">],</span>
+       <span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">,</span> <span class="mi" style="color: rgb(64, 160, 112);">1</span><span
+class="p">]])</span>
+
+<span class="c1" style="color: rgb(96, 160, 176); font-style: italic;">#Another way is:</span>
+<span class="n">a</span><span class="p">[</span><span class="mi" style="color: rgb(64, 160, 112);">3</span><span
+class="p">:,:]</span><span class="o" style="color: rgb(102, 102, 102);">=</span><span
+class="n">np</span><span class="o" style="color: rgb(102, 102, 102);">.</span><span
+class="n">expand_dims</span><span class="p">(</span><span class="n">b</span><span
+class="p">,</span><span class="n">axis</span><span class="o" style="color: rgb(102, 102, 102);">=</span><span
+class="mi" style="color: rgb(64, 160, 112);">1</span><span class="p">)</span><span
+class="p"></span></pre><br><br><br>
+        <a href="index.html">back</a> </div>
+    </div>
+</body></html>
