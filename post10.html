@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  </head>
+  <body style="   background-image: url(&quot;background.jpg&quot;); width: 927px;">
+    <font color="blue">Chemgeeklian's new blog</font> <br>
+    <br>
+    <span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"><br>
+    </span>
+    <hr><span style="color: rgb(0, 0, 0); font-family: &quot;Microsoft YaHei&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"><br>
+    </span> 上次更新居然是3个月之前了...果然学Ng入门课不需要动脑子什么的，不过要用R学Bayes
+    Modeling也真是蛋疼。由于强迫症不想安Rstudio，还是非常麻烦地在VS里配置了R，过程无比地绕，所以不得不记录一个.
+    总之不知道下次更新会是什么时候，大概那时我已经死了……撒，衣裤哟！<br>
+    <br>
+    <img style="width: 921px; height: 517px;" alt="" src="PPP.jpg"><br>
+    <br>
+    <div style="text-align: justify;"> 1. Firstly download R in <a href="https://cran.cnr.berkeley.edu/">https://cran.cnr.berkeley.edu/</a>
+      and install R in a location you know.There are many mirrors to choose in
+      fact.<br>
+      2. In <strong>extensions</strong> (Ctrl+Shift+S) of VS code download <strong>Powershell</strong>
+      and <strong>R</strong><br>
+      3. In <strong>setting</strong> (Ctrl+",") of VS code, go to <strong>extensions
+        -&gt; r -&gt; Rterm:Windows</strong> and set path to the location of
+      R.exe where you installed (e.g. D:\R\R-3.5.1\bin\R.exe)<br>
+      4. There are lots of stuff to configure default path of Powershell. open
+      your r script and Powershell terminal in VScode. Type <code><br>
+        <br>
+        get-executionpolicy<br>
+        <br>
+      </code>in Powershell and it will return <code>restricted</code>. To
+      change
+      the&nbsp; permission to <code> remotesigned</code>, open Powershell with
+      <strong>administrator privilege</strong> and type<br>
+      <br>
+      <code>set-executionpolicy remotesigned</code> <br>
+      <br>
+      5. Create dictionary and file: C:\Users\<font color="red">XXX</font>\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1</div>
+    6. In powershell, <br>
+    <div class="highlight" style="margin: 0px 0px 1em; color: rgb(26, 26, 26); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+      <pre style="margin: 0px; padding: 0.88889em; font-size: 0.9em; overflow-wrap: normal; white-space: pre; overflow: auto; background: rgb(246, 246, 246); border-radius: 4px;"><code
+class="language-text" style="margin: 0px; padding: 0px; border-radius: 0px; font-family: Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: inherit; background-color: inherit;">echo "Set-Location D:\" &gt; $Profile
+</code></pre></div>
+    7. Test your first script by typing&nbsp; <code>.\Rscript
+      path-of-your-script</code> in Powershell, e.g.<br>
+    <br>
+    <div style="text-align: justify;"><code>.\Rscript e:\Untitled-1.r</code></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="index.html">back</a>
+  </body>
+</html>
