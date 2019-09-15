@@ -1,21 +1,21 @@
 # Site settings
-title: Another Blog
-url: "http://laobubu.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+title: ChemGeekLian's Blog
+url: "http://chemgeeklian.github.io"
 baseurl: "/jekyll-theme-EasyBook" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
-#timezone: Asia/Chongqing
+timezone: America/Chicago
 description: >
-  One or more sentences introducing this blog.
+  Keep calm and become rich.
 
 # Your information
-email: your_email@example.com
-author: your_name
+email: 
+author: Xinran Lian
 avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: One sentence introducing yourself.
+profile: Too young too simple, sometimes naive.
 #twitter_username: twitter_username
-#github_username:  github_username
+github_username:  chemgeeklian
 profile_links:
-  Email: "mailto:your_email@example.com"
-  GitHub: "https://github.com/laobubu/jekyll-theme-EasyBook"
+#  Email: "mailto:your_email@example.com"
+  GitHub: "https://github.com/chemgeeklian/chemgeeklian.github.io"
   # You can add more profile links above, or edit _includes/sidebar.html 
 
 # Comment Service (Disqus or 多说)
