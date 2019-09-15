@@ -1,59 +1,46 @@
-# Site settings
-title: ChemGeekLian's Blog
-url: "http://chemgeeklian.github.io"
-baseurl: "/jekyll-theme-EasyBook" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
-timezone: America/Chicago
-description: >
-  Keep calm and become rich.
+title: Link #博客标题
+description: Just 4 Fun. #博客描述
+keywords: blog,css,html,php #博客关键字
+author: "Link"
 
-# Your information
-email: 
-author: Xinran Lian
-avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: Too young too simple, sometimes naive.
-#twitter_username: twitter_username
-github_username:  chemgeeklian
-profile_links:
-#  Email: "mailto:your_email@example.com"
-  GitHub: "https://github.com/chemgeeklian/chemgeeklian.github.io"
-  # You can add more profile links above, or edit _includes/sidebar.html 
+#title hide and show
+hide: (つェ⊂)我藏好啦
+show: ´∇｀ 呀被发现啦~ 
 
-# Comment Service (Disqus or 多说)
-#  choose one and un-comment the line to active it
-#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
-#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "hydrogen.atlinker.cn" # change this to the base hostname & protocol for your site
+buildtime: "1514736000" #博客建立时的时间戳 可进入https://tool.lu/timestamp/将博客建立时的日期转换成时间戳
+           #The timestamp at the time of blog establishment can be entered at https://tool.lu/timestamp/to convert the date at the time of blog establishment into a timestamp.
 
-excerpt_separator: <!--more-->
+PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议开启）
 
-header:
-  links:             # Links on the header. Link to in-site page with a slash as prefix
-    About: /about/
-    Category: /category/
-    Donate: https://laobubu.net/donate.html
-
-permalink: /archivers/:title
-plugins:
- - jekyll-paginate
- - jekyll-gist
- - jemoji
-
-# Build settings
-paginate: 5
+paginate: 8 #同时显示的最大文章数，超过自动分页
 paginate_path: "page:num"
 
-highlighter: rouge
-markdown: kramdown
+background: https://api.dujin.org/bing/1920.php
+theme_color: 546E7A
 
-# https://jekyllrb.com/docs/configuration/#precedence
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+google_analytics:
+# hydrogen-blog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+hydrogen-blog:
+  date_format: "%b %-d, %Y"
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  math_engine: mathjax
+#MathJax switch
+MathJax: false
+
+#install emoji
+plugins:
+  - jemoji
+
+# social account
+image:
+twitter:
+  username:
+#  site:
+facebook:
+  #publisher: null
+  #profile_id: null
+  app_id: null
+  #authors: null
+#  admins:
