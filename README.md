@@ -2,5 +2,5 @@
 
 [Lian's blog](https://chemgeeklian.github.io)
 
-octocat :+1: This PR looks great - it's ready to merge! :shipit:
+Chemgeeklian's blog has been reconstructed using jekyll on Sept. 15 2019.
 ~
